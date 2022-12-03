@@ -118,6 +118,13 @@ print("The Mean Absolute Error: %.2f degrees celsius" % mean_absolute_error(y_te
 print("The Median Absolute Error: %.2f degrees celsius" % median_absolute_error(y_test, prediction))
 
 # %% [markdown]
+# Save the trained model as a file by using `joblib`.
+
+# %%
+import joblib
+joblib.dump(regressor, r'models/basicLinearRegression.joblib')
+
+# %% [markdown]
 # ### Testing zone
 
 # %%
@@ -149,10 +156,10 @@ regressor.predict(df_test_nona)
 # 
 # ![weather_forecast_20221203](bj20221203weather.png)
 # 
-# mean temperature: $\frac{2 + (-8)}{2} = -3$
+# mean temperature: $\frac{2 + (-8)}{2} = -3$℃
 # 
-# predicted mean temperature: $-5.47$
+# predicted mean temperature: $-5.47$℃
 # 
-# error: $2.47$
+# error: $2.47$℃
 
 
